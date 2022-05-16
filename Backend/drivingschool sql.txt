@@ -1,0 +1,81 @@
+ show databases;
++--------------------+
+| Database           |
++--------------------+
+| drivingschool      |
+| information_schema |
+| mysql              |
+| performance_schema |
+| product            |
+| productdb          |
+| rllproject         |
+| sakila             |
+| spring_hibernate   |
+| students           |
+| sys                |
+| userlogin          |
+| vinay              |
+| world              |
++--------------------+
+14 rows in set (0.0008 sec)
+ MySQL  localhost:3306 ssl  SQL > use drivingschool;
+Default schema set to `drivingschool`.
+Fetching table and column names from `drivingschool` for auto-completion... Press ^C to stop.
+ MySQL  localhost:3306 ssl  drivingschool  SQL > show tables;
++-------------------------+
+| Tables_in_drivingschool |
++-------------------------+
+| admin                   |
+| package_details         |
+| students                |
+| trainers                |
++-------------------------+
+4 rows in set (0.0010 sec)
+ MySQL  localhost:3306 ssl  drivingschool  SQL > desc admin;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| aid       | int          | NO   | PRI | NULL    | auto_increment |
+| aemail    | varchar(255) | YES  |     | NULL    |                |
+| aname     | varchar(255) | YES  |     | NULL    |                |
+| apassword | varchar(255) | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+4 rows in set (0.0014 sec)
+ MySQL  localhost:3306 ssl  drivingschool  SQL > desc students;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| sid       | int          | NO   | PRI | NULL    | auto_increment |
+| sage      | varchar(255) | YES  |     | NULL    |                |
+| semail    | varchar(255) | YES  |     | NULL    |                |
+| slocation | varchar(255) | YES  |     | NULL    |                |
+| sname     | varchar(255) | YES  |     | NULL    |                |
+| spassword | varchar(255) | YES  |     | NULL    |                |
+| pid       | int          | YES  | MUL | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+7 rows in set (0.0015 sec)
+ MySQL  localhost:3306 ssl  drivingschool  SQL > desc trainers;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| tid       | int          | NO   | PRI | NULL    | auto_increment |
+| temail    | varchar(255) | YES  |     | NULL    |                |
+| tlocation | varchar(255) | YES  |     | NULL    |                |
+| tname     | varchar(255) | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+4 rows in set (0.0014 sec)
+ MySQL  localhost:3306 ssl  drivingschool  SQL > desc package_details;
++--------------------+--------------+------+-----+---------+----------------+
+| Field              | Type         | Null | Key | Default | Extra          |
++--------------------+--------------+------+-----+---------+----------------+
+| pid                | int          | NO   | PRI | NULL    | auto_increment |
+| pname              | varchar(255) | YES  |     | NULL    |                |
+| pstartingdate      | datetime(6)  | YES  |     | NULL    |                |
+| pstudentattendance | varchar(255) | YES  |     | NULL    |                |
+| ptrainerexp        | int          | NO   |     | NULL    |                |
+| ptrainerlocation   | varchar(255) | YES  |     | NULL    |                |
+| ptrainername       | varchar(255) | YES  |     | NULL    |                |
+| pvehicle           | varchar(255) | YES  |     | NULL    |                |
++--------------------+--------------+------+-----+---------+----------------+
+8 rows in set (0.0015 sec)
+ MySQL  localhost:3306 ssl  drivingschool  SQL >
